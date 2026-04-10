@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wichan-dev-wildcard
+  namespace: pluto
+spec:
+  secretName: wichan-dev-tls-secret
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: "*.wichan.dev"
+  dnsNames:
+  - "*.wichan.dev"
+  - "wichan.dev"
