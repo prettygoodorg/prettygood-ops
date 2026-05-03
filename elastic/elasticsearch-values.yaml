@@ -11,6 +11,7 @@ spec:
     config:
       node.store.allow_mmap: false
       xpack.ml.enabled: false
+      discovery.type: single-node
     volumeClaimTemplates:
     - metadata:
         name: elasticsearch-data
